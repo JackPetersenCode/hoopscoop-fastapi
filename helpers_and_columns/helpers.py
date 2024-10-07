@@ -27,7 +27,6 @@ def validate_parameters(season, box_type, selected_team, sort_field, order, play
 
     # Validate sort_field to prevent SQL injection
     allowed_sort_fields = stat_columns[0][f"box_score_{box_type.lower()}_columns"]
-    print(allowed_sort_fields)
     
 
     if sort_field not in allowed_sort_fields:
